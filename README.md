@@ -1,5 +1,5 @@
-## About the Repository: decentraSplit
-decentraSplit is a Web3-based decentralized application (dApp) designed to solve the "trust" issue in group expenses. Unlike traditional apps like Splitwise, where settlements are just "promises" of payment, this protocol uses audited smart contracts to ensure that debts are settled on-chain.
+## About the Repository: AdrianPay
+AdrianPay is a Web3-based decentralized application (dApp) designed to solve the "trust" issue in group expenses. Unlike traditional apps like Splitwise, where settlements are just "promises" of payment, this protocol uses audited smart contracts to ensure that debts are settled on-chain.
 Core Concept: A "trustless" group expense protocol.
 Target Event: Created for the ETHGlobal Hackathon 2026.
 Key Stats (from landing page):
@@ -12,10 +12,11 @@ Frontend: Likely React/Next.js (deployed on Vercel).
 Backend: Smart contracts (Solidity) for handling on-chain logic.
 Wallet Integration: Support for Web3 wallets (Connect Wallet button).
 Generated README.md
+
+
 Below is a structured README.md file based on the visual information from your repo:
-code
-Markdown
-# decentraSplit 💸
+
+# AdrianPay 💸
 
 **Split bills. Not trust.** 
 
