@@ -940,7 +940,7 @@ function Footer({ onGuest, onConnect }: { onGuest: () => void; onConnect: () => 
       {/* Stats strip */}
       <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
         <div style={{ maxWidth: 1080, margin: '0 auto', padding: '28px 40px', display: 'grid', gridTemplateColumns: 'repeat(4,1fr)', gap: 24, textAlign: 'center' }}>
-          {[['10,000+','Transactions Settled'],['$2M+','Total Volume'],['5 Chains','Deployed On'],['100%','Open Source']].map(([v,l]) => (
+          {[['10,000+', 'Transactions Settled'], ['$2M+', 'Total Volume'], ['5 Chains', 'Deployed On'], ['100%', 'Open Source']].map(([v, l]) => (
             <div key={l}>
               <div style={{ fontSize: 20, fontWeight: 700, fontFamily: 'Syne,sans-serif', letterSpacing: '-0.02em', color: '#f0f4ff', marginBottom: 4 }}>{v}</div>
               <div style={{ fontSize: 11, fontFamily: 'DM Mono,monospace', color: 'rgba(240,244,255,0.3)', textTransform: 'uppercase', letterSpacing: '0.06em' }}>{l}</div>
@@ -955,7 +955,7 @@ function Footer({ onGuest, onConnect }: { onGuest: () => void; onConnect: () => 
           © 2026 Team Alpha Dev · Built at ETHGlobal Hackathon
         </span>
         <div style={{ display: 'flex', gap: 24 }}>
-          {['Privacy','Terms','Security','MIT License'].map(l => (
+          {['Privacy', 'Terms', 'Security', 'MIT License'].map(l => (
             <span key={l} style={{ fontFamily: 'DM Mono,monospace', fontSize: 11, color: 'rgba(240,244,255,0.2)', cursor: 'pointer' }}>{l}</span>
           ))}
         </div>
