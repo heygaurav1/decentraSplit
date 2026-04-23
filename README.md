@@ -1,4 +1,4 @@
-About the Repository: decentraSplit
+## About the Repository: decentraSplit
 decentraSplit is a Web3-based decentralized application (dApp) designed to solve the "trust" issue in group expenses. Unlike traditional apps like Splitwise, where settlements are just "promises" of payment, this protocol uses audited smart contracts to ensure that debts are settled on-chain.
 Core Concept: A "trustless" group expense protocol.
 Target Event: Created for the ETHGlobal Hackathon 2026.
