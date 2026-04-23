@@ -289,8 +289,8 @@ function Navbar({ onGuest, onConnect }: { onGuest: () => void; onConnect: () => 
     <nav className="nav">
       <div className="nav-logo">Decentra<span>Split</span></div>
       <div className="nav-links">
-        {['Product','How It Works','Protocol','Roadmap','FAQ'].map(l => (
-          <a key={l} href={`#${l.toLowerCase().replace(/ /g,'-')}`}>{l}</a>
+        {['Product', 'How It Works', 'Protocol', 'Roadmap', 'FAQ'].map(l => (
+          <a key={l} href={`#${l.toLowerCase().replace(/ /g, '-')}`}>{l}</a>
         ))}
       </div>
       <div className="nav-right">
@@ -311,10 +311,10 @@ function Hero({ onGuest, onConnect }: { onGuest: () => void; onConnect: () => vo
       <div className="orb" style={{ width: 600, height: 600, background: '#0ea5e9', top: '10%', left: '30%', transform: 'translate(-50%,-50%)' }} />
       <div className="orb" style={{ width: 400, height: 400, background: '#10b981', top: '70%', right: '10%', opacity: 0.2 }} />
 
-      <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.22,1,0.36,1] }} style={{ maxWidth: 760, position: 'relative', zIndex: 1 }}>
+      <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }} style={{ maxWidth: 760, position: 'relative', zIndex: 1 }}>
         <div style={{ display: 'flex', justifyContent: 'center', gap: 10, marginBottom: 32, flexWrap: 'wrap' }}>
           <span className="pill"><span style={{ width: 6, height: 6, borderRadius: '50%', background: '#10b981', display: 'inline-block', boxShadow: '0 0 8px #10b981' }} />Protocol Live · Polygon + Ethereum</span>
-          <span className="badge"><Sparkles size={9} />ETHGlobal Hackathon 2024</span>
+          <span className="badge"><Sparkles size={9} />ETHGlobal Hackathon 2026</span>
         </div>
         <h1 style={{ fontSize: 'clamp(44px, 8vw, 88px)', fontWeight: 800, lineHeight: 1.02, letterSpacing: '-0.04em', margin: '0 0 24px' }}>
           Split bills.<br />
@@ -380,7 +380,7 @@ function TheProblem() {
           <motion.div {...slideLeft} className="card" style={{ borderColor: 'rgba(244,63,94,0.2)', background: 'rgba(244,63,94,0.04)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 20 }}>
               <div style={{ width: 36, height: 36, borderRadius: 10, background: 'rgba(244,63,94,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" strokeWidth="2.5" strokeLinecap="round"><line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" /></svg>
               </div>
               <span style={{ fontSize: 15, fontWeight: 700, fontFamily: 'Syne, sans-serif' }}>Splitwise / Tricount</span>
             </div>
@@ -573,7 +573,7 @@ function Protocol() {
 
 // ─── SECTION 8: MULTI-CHAIN ──────────────────────────────────────────────────
 function MultiChain() {
-  const chains = ['Ethereum','Polygon','Arbitrum','Base','Optimism','zkSync'];
+  const chains = ['Ethereum', 'Polygon', 'Arbitrum', 'Base', 'Optimism', 'zkSync'];
   return (
     <section className="section-sm" style={{ background: 'var(--bg-2)', textAlign: 'center', overflow: 'hidden' }}>
       <div className="container-sm">
@@ -586,15 +586,15 @@ function MultiChain() {
       {/* Ticker */}
       <div className="ticker">
         <div className="ticker-inner">
-          {[...chains,...chains].map((c, i) => (
+          {[...chains, ...chains].map((c, i) => (
             <span key={i} style={{ fontSize: 13, fontFamily: 'DM Mono, monospace', color: 'var(--text-3)', padding: '8px 20px', border: '1px solid var(--border)', borderRadius: 100, background: 'var(--bg)', whiteSpace: 'nowrap' }}>{c}</span>
           ))}
         </div>
       </div>
       <div style={{ height: 24 }} />
       <div style={{ maxWidth: 600, margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 12 }}>
-        {[['~$0.001','Avg gas on Polygon'],['< 2s','Block finality L2'],['5 chains','Currently deployed']].map(([v,l],i) => (
-          <motion.div key={i} {...inView} transition={{ delay: i*0.1 }} style={{ background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 14, padding: '20px 16px', textAlign: 'center' }}>
+        {[['~$0.001', 'Avg gas on Polygon'], ['< 2s', 'Block finality L2'], ['5 chains', 'Currently deployed']].map(([v, l], i) => (
+          <motion.div key={i} {...inView} transition={{ delay: i * 0.1 }} style={{ background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 14, padding: '20px 16px', textAlign: 'center' }}>
             <div style={{ fontSize: 20, fontWeight: 700, fontFamily: 'Syne, sans-serif', letterSpacing: '-0.02em', color: 'var(--accent)' }}>{v}</div>
             <div style={{ fontSize: 11, color: 'var(--text-3)', marginTop: 4, fontFamily: 'DM Mono, monospace' }}>{l}</div>
           </motion.div>
@@ -606,7 +606,7 @@ function MultiChain() {
 
 // ─── SECTION 9: ANALYTICS ───────────────────────────────────────────────────
 function Analytics() {
-  const bars = [40,55,45,72,58,100,74];
+  const bars = [40, 55, 45, 72, 58, 100, 74];
   return (
     <section className="section">
       <div className="container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 80, alignItems: 'center' }}>
@@ -622,12 +622,12 @@ function Analytics() {
               ))}
             </div>
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-              {['Mo','Tu','We','Th','Fr','Sa','Su'].map(d => (
+              {['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'].map(d => (
                 <span key={d} style={{ flex: 1, textAlign: 'center', fontSize: 10, color: 'var(--text-3)', fontFamily: 'DM Mono, monospace' }}>{d}</span>
               ))}
             </div>
             <div style={{ marginTop: 20, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 10 }}>
-              {[['0xA1...f3','0.42 ETH paid'],['0xB2...c9','0.28 ETH owed'],['0xC3...d4','0.15 ETH paid'],['0xD4...e5','Settled ✓']].map(([addr,stat],i) => (
+              {[['0xA1...f3', '0.42 ETH paid'], ['0xB2...c9', '0.28 ETH owed'], ['0xC3...d4', '0.15 ETH paid'], ['0xD4...e5', 'Settled ✓']].map(([addr, stat], i) => (
                 <div key={i} style={{ background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 10, padding: '10px 12px' }}>
                   <div style={{ fontSize: 10, color: 'var(--accent)', fontFamily: 'DM Mono, monospace' }}>{addr}</div>
                   <div style={{ fontSize: 11, color: 'var(--text-2)', marginTop: 2 }}>{stat}</div>
@@ -640,7 +640,7 @@ function Analytics() {
           <span className="tag">Analytics</span>
           <h2 style={{ fontSize: 'clamp(22px, 3vw, 38px)', fontWeight: 800, letterSpacing: '-0.03em', margin: '14px 0 16px', lineHeight: 1.1 }}>Real-time group finance visibility</h2>
           <p style={{ fontSize: 14, color: 'var(--text-2)', lineHeight: 1.75, marginBottom: 24 }}>See who owes what at a glance. Volume trends, per-member contribution breakdowns, and full settlement history — all live from the chain. No backend needed.</p>
-          {['Real-time on-chain balance tracking','Per-member spend & contribution breakdown','Settlement timeline with block explorer links','7-day volume trend chart','Exportable transaction history'].map((f,i) => (
+          {['Real-time on-chain balance tracking', 'Per-member spend & contribution breakdown', 'Settlement timeline with block explorer links', '7-day volume trend chart', 'Exportable transaction history'].map((f, i) => (
             <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11 }}>
               <CheckCircle2 size={14} color="var(--green)" style={{ flexShrink: 0 }} />
               <span style={{ fontSize: 13, color: 'var(--text-2)' }}>{f}</span>
@@ -694,7 +694,7 @@ function GuestModeExplainer({ onGuest }: { onGuest: () => void }) {
           <p style={{ fontSize: 14, color: 'var(--text-2)', lineHeight: 1.75, marginBottom: 28 }}>
             We know not everyone has a crypto wallet. Guest Mode loads a real demo environment populated with sample data so you can experience the full product — no setup, no barrier.
           </p>
-          {['Full dashboard with demo group data','Create and log mock expenses','See how balances recalculate in real-time','Explore analytics and settlement history','Switch to real wallet anytime'].map((f,i) => (
+          {['Full dashboard with demo group data', 'Create and log mock expenses', 'See how balances recalculate in real-time', 'Explore analytics and settlement history', 'Switch to real wallet anytime'].map((f, i) => (
             <div key={i} style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 11 }}>
               <CheckCircle2 size={14} color="var(--green)" style={{ flexShrink: 0 }} />
               <span style={{ fontSize: 13, color: 'var(--text-2)' }}>{f}</span>
@@ -742,7 +742,7 @@ function Roadmap() {
           <p style={{ fontSize: 14, color: 'var(--text-2)', lineHeight: 1.75, marginBottom: 40 }}>The roadmap is public, auditable, and built around real user needs — not hype. Here's where we're going.</p>
           <div style={{ background: 'var(--bg)', border: '1px solid var(--border)', borderRadius: 16, padding: '24px 20px' }}>
             <div style={{ fontSize: 11, fontFamily: 'DM Mono, monospace', color: 'var(--text-3)', marginBottom: 14, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Completion</div>
-            {[['Protocol Core', 100],['Analytics', 85],['Multi-chain', 70],['Smart Accounts', 30]].map(([l, p], i) => (
+            {[['Protocol Core', 100], ['Analytics', 85], ['Multi-chain', 70], ['Smart Accounts', 30]].map(([l, p], i) => (
               <div key={i} style={{ marginBottom: 14 }}>
                 <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 6 }}>
                   <span style={{ fontSize: 12, color: 'var(--text-2)' }}>{l}</span>
@@ -829,14 +829,14 @@ function FAQ() {
       <div className="container-sm">
         <motion.div {...inView} style={{ marginBottom: 48 }}>
           <span className="tag">FAQ</span>
-          <h2 style={{ fontSize: 'clamp(26px, 3.5vw, 44px)', fontWeight: 800, letterSpacing: '-0.03em', margin: '14px 0 0', lineHeight: 1.1 }}>Common questions</h2>
+          <h2 style={{ fontSize: 'clamp(26px, 3.5vw, 44px)', fontWeight: 800, letterSpacing: '-0.03em', margin: '14px 0 0', lineHeight: 1.1 }}>questions</h2>
         </motion.div>
         {faqs.map((f, i) => (
           <motion.div key={i} {...inView} transition={{ delay: i * 0.06 }} className="faq-item" onClick={() => setOpen(open === i ? null : i)}>
             <div className="faq-q">
               <span>{f.q}</span>
               <motion.div animate={{ rotate: open === i ? 45 : 0 }} transition={{ duration: 0.2 }}>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-3)" strokeWidth="2" strokeLinecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--text-3)" strokeWidth="2" strokeLinecap="round"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
               </motion.div>
             </div>
             <AnimatePresence>
@@ -890,7 +890,7 @@ function Footer({ onGuest, onConnect }: { onGuest: () => void; onConnect: () => 
     'Product': ['Features', 'How It Works', 'Guest Mode', 'Protocol', 'Analytics'],
     'Ecosystem': ['Ethereum', 'Polygon', 'Arbitrum', 'Base', 'Optimism'],
     'Developers': ['Smart Contract', 'GitHub', 'Audit Report', 'Documentation', 'Deployments'],
-    'Company': ['About Team Alpha Dev', 'Hackathon 2024', 'Contact', 'Twitter', 'Discord'],
+    'Company': ['About Team Alpha Dev', 'Hackathon 2026', 'Contact', 'Twitter', 'Discord'],
   };
   return (
     <footer style={{ background: '#050709', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
@@ -952,7 +952,7 @@ function Footer({ onGuest, onConnect }: { onGuest: () => void; onConnect: () => 
       {/* Bottom bar */}
       <div style={{ maxWidth: 1080, margin: '0 auto', padding: '20px 40px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 12 }}>
         <span style={{ fontFamily: 'DM Mono,monospace', fontSize: 11, color: 'rgba(240,244,255,0.2)' }}>
-          © 2024 Team Alpha Dev · Built at ETHGlobal Hackathon
+          © 2026 Team Alpha Dev · Built at ETHGlobal Hackathon
         </span>
         <div style={{ display: 'flex', gap: 24 }}>
           {['Privacy','Terms','Security','MIT License'].map(l => (
@@ -973,6 +973,7 @@ export default function Landing({ onGuest, onConnect }: { onGuest: () => void; o
     <>
       <style>{css}</style>
       <Navbar onGuest={onGuest} onConnect={onConnect} />
+      {/* 15 landscape sections */}
       <Hero onGuest={onGuest} onConnect={onConnect} />
       <StatsBar />
       <TheProblem />
