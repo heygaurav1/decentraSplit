@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "DecentraSplit smart contracts",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "node": "npx hardhat node",
+    "deploy": "npx hardhat run scripts/deploy.js --network localhost"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.2",
+    "hardhat": "^2.28.6"
+  }
+}
